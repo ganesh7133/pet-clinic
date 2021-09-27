@@ -13,5 +13,10 @@ pipeline {
                 git branch: branch, credentialsId: 'GitCredentials', url: scmUrl
             }
         }
+       stage('maven build') {
+            steps {
+                sh 'mvn clean package'
+            }
+        }
     }
 }
