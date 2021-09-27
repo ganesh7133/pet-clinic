@@ -1,14 +1,16 @@
 @Library('jenkins-library') _
- 
+
 pipeline {
     agent any
+    environment {
+        branch = 'master'
+        scmUrl = 'https://github.com/Prasad459/pet-clinic.git'
+        
+    }
     stages {
-        stage('Git Checkout') {
+        stage('checkout git') {
             steps {
-            git-checkout(
-                branch: "master",
-                url: "https://github.com/Prasad459/pet-clinic.git"
-            )
+                git branch: branch, credentialsId: 'GitCredentials', url: scmUrl
             }
         }
     }
