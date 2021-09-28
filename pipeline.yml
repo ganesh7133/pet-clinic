@@ -1,0 +1,64 @@
+#case sensitive file for now
+version: 1.0.11
+#TeamName of deploying team
+team: ServicesDelivery
+
+#######################
+## BuildInformation  ##
+#######################
+#case sensitive
+#define the build tool to use ex. maven,gradle
+UseBuildTool: maven
+##this can be clean install or clean compile -D=jacoco or similar
+mavenGoal: 'clean package -Pgen-openapi,gen-openapi-model -DskipTests'
+#mavenGoal: 'clean install -Pgen-openapi,gen-openapi-model -DskipTests'
+
+#Used for Veracode - ex '**/**.jar'
+deliverableFileType: '**/**.war'
+
+#ex. docker - if no image tool is defined Docker image will not be built
+imageTool:
+
+#pomDir = where pom.xml is located - leave '' if pom.xml is at root
+#pomDir needs / at end ex. provider-svc/
+pomDir: ''
+#dockerDir = where Dockerfile is located - no / needed
+dockerDir:
+#example - gradeRoot = 'gradle-examples/gradle-example/'
+gradleRoot:
+##following must match POM.XML
+POMArtifactID: spring-framework-petclinic
+POMVersion: 5.3.10
+
+###################
+##  Artifactory  ##
+###################
+#whether or not you want artifacts uploaded to Jfrog
+UploadArtifact: true
+#deploy artifact jenkins user - ID located in jenkins credentials store
+ArtifactCredentialsID: 'artifactory'
+
+#repo that will get uploaded to - subject to change when snapshots are no longer made
+deployerreleaseRepo: 'libs-release-local'
+deployersnapshot Repo: 'libs-snapshot-local'
+resolverreleaseRepo: 'libs-release'
+resolversnapshotRepo: 'libs-snapshot'
+
+###########################
+##   SonarQube           ##
+###########################
+#set sonarqube to True/False
+SonarQube: 'true'
+sonarhosturl: ''
+sonarprojectkey:
+sonarlogin:
+sonarGoal: ''
+
+#########################
+##    Docker           ##
+#########################
+#Artifactory Registry Repo name
+DOCKER_REGISTRY: ''
+DOCKER_URL: ''
+DOCKER_REPO: ''
+REGISTRY_CREDS: ''
