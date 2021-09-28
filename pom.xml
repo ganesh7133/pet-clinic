@@ -552,5 +552,11 @@
             <url>https://repo.spring.io/milestone</url>
         </repository>
     </repositories>
-
+    <distributionManagement>
+    <repository>
+        <id>central</id>
+        <name>ip-10-1-1-198.ec2.internal-releases</name>
+        <url>http://3.237.61.141:8081/artifactory/libs-release</url>
+    </repository>
+</distributionManagement>
 </project>
