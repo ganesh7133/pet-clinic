@@ -24,7 +24,7 @@ imageTool: docker
 #pomDir needs / at end ex. provider-svc/
 pomDir: ''
 #dockerDir = where Dockerfile is located - no / needed
-dockerDir:
+dockerDir: ''
 #example - gradeRoot = 'gradle-examples/gradle-example/'
 gradleRoot:
 ##following must match POM.XML
