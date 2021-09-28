@@ -18,7 +18,7 @@ mavenGoal: 'clean package -Pgen-openapi,gen-openapi-model -DskipTests'
 deliverableFileType: '**/**.war'
 
 #ex. docker - if no image tool is defined Docker image will not be built
-imageTool:
+imageTool: docker
 
 #pomDir = where pom.xml is located - leave '' if pom.xml is at root
 #pomDir needs / at end ex. provider-svc/
@@ -59,7 +59,7 @@ sonarGoal: ''
 ##    Docker           ##
 #########################
 #Artifactory Registry Repo name
-DOCKER_REGISTRY: ''
-DOCKER_URL: ''
-DOCKER_REPO: ''
-REGISTRY_CREDS: ''
+DOCKER_REGISTRY: 'prasad459'
+DOCKER_URL: 'https://index.docker.io/v1/'
+DOCKER_REPO: 'petclinic'
+REGISTRY_CREDS: 'dockerhub'
