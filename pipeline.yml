@@ -60,6 +60,6 @@ sonarGoal: ''
 #########################
 #Artifactory Registry Repo name
 DOCKER_REGISTRY: 'prasad459'
-DOCKER_URL: 'https://index.docker.io/v1/'
+DOCKER_URL: 'https://hub.docker.com/'
 DOCKER_REPO: 'petclinic'
 REGISTRY_CREDS: 'dockerhub'
