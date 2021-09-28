@@ -10,7 +10,8 @@ team: ServicesDelivery
 #define the build tool to use ex. maven,gradle
 UseBuildTool: maven
 ##this can be clean install or clean compile -D=jacoco or similar
-mavenGoal: 'clean package -Pgen-openapi,gen-openapi-model -DskipTests'
+mavenGoal: 'clean package'
+#mavenGoal: 'clean package -Pgen-openapi,gen-openapi-model -DskipTests'
 #mavenGoal: 'clean install -Pgen-openapi,gen-openapi-model -DskipTests'
 
 #Used for Veracode - ex '**/**.jar'
@@ -27,8 +28,8 @@ dockerDir:
 #example - gradeRoot = 'gradle-examples/gradle-example/'
 gradleRoot:
 ##following must match POM.XML
-POMArtifactID: spring-framework-petclinic
-POMVersion: 5.3.10
+POMArtifactID: 'spring-framework-petclinic'
+POMVersion: '5.3.10'
 
 ###################
 ##  Artifactory  ##
